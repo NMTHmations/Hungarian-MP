@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The Hungarian National Assembly's website published the MP's wealth statement, in a more than 2000 pages long document. The document in general not so well readable. To ease accesibilitz for the Hungarian journalists, or the simple citizens, I have created a tool, which slices the document into several wealth statement document.
+The Hungarian National Assembly's website published the MP's wealth statement, in a more than 2000 pages long document. The document in general not so well readable. To ease accesibility for the Hungarian journalists, or the simple citizens, I have created a tool, which slices the document into several wealth statement document.
 
 ## Installation, settings
 
