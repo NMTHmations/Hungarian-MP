@@ -87,6 +87,8 @@ def main():
     
     #save file and result
     save_file(pdfReader,result)
+    file.close()
+    pdf.close()
 
 if __name__ == "__main__":
     main()

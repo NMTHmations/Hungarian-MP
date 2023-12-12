@@ -4,23 +4,8 @@ import PyPDF2
 import os
 import re
 
-
-def main():
-    # initalizing PDF and create CSV
-    # creates kepviselok directory, where all MP's wealth statement is contained
-    file = open("Kepviselok_dec_20230712.pdf","rb")
-    pdfReader = PyPDF2.PdfReader(file)
-    path = "kepviselok"
-    try:
-        os.mkdir(path)
-    except FileExistsError:
-        print("FileExistsError: A könyvtár már létezik")
-    csvtools.create_csv()
-    li = pdftools.import_from_CSV()
-    os.chdir(path)
-    length = len(li)
-    num = len(pdfReader.pages)
-    #Creates the file and misses all accents in the filename
+#Creates the files and misses all accents in the filename
+def create_files(pdfReader,li,length,num):
     for i in range(length):
         vezeteknev = li[i].csaladnev
         keresztnev = li[i].keresztnevek
@@ -42,6 +27,26 @@ def main():
             print("Megtaláltuk!")
             end = pdftools.ending(pdfReader,start,num)
             pdftools.output(pdfReader,start,end,filename)
+
+def main():
+    # initalizing PDF and create CSV
+    # creates kepviselok directory, where all MP's wealth statement is contained
+    file = open("Kepviselok_dec_20230712.pdf","rb")
+    pdfReader = PyPDF2.PdfReader(file)
+    path = "kepviselok"
+    try:
+        os.mkdir(path)
+    except FileExistsError:
+        print("FileExistsError: A könyvtár már létezik")
+    #create CSV files
+    csvtools.create_csv()
+    #import from CSV
+    li = pdftools.import_from_CSV()
+    os.chdir(path)
+    length = len(li)
+    num = len(pdfReader.pages)
+    #Creates the files and misses all accents in the filename
+    create_files(pdfReader,li,length,num)
     file.close()
 
 if __name__ == "__main__":
