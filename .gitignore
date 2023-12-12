@@ -1,5 +1,6 @@
 # folders
 kepviselok
+__pycache__
 
 #file-extensions
 *.exe
@@ -10,3 +11,7 @@ kepviselok
 *.png
 *.gif
 *.csv
+
+
+#shits
+.DS_Store
