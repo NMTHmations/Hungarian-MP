@@ -11,7 +11,4 @@ __pycache__
 *.png
 *.gif
 *.csv
-
-
-#shits
-.DS_Store
+*.DS_Store
