@@ -21,17 +21,13 @@ pip3 install PyPDF2
 
 ## Usage
 
-Once You have downloaded python, and all the packages, then you can use the extracter tool.
-
-To avoid crashes, I recommend the following steps, in order to maintain your MP's wealth statements:
-
-1. Use names_to_csv.py, with the following command:
+1. If you want to search by name, you can run this command:
 
 ```
-python3 names_to_csv.py
+python3 searchname.py
 ```
 
-2. Than run the pdfextract.py, with this command:
+2. If you want all MPs' wealth statement in a single directory (kepviselok), than you should run this command:
 
 ```
 python3 pdfextract.py
@@ -43,7 +39,7 @@ python3 pdfextract.py
 
 + Some politicians may have changed their names, or use different name formats, which the algorithm cannot detect so far. (I'm working on this issue)
 
-+ Search type version will roll out in the next few days.
++ Search type version will roll out in the next few days. (Solved)
 
 # Vagyonnyilatkozat-szeletelő
 
@@ -66,17 +62,13 @@ pip3 install PyPDF2
 
 ## Használat
 
-Ha már telepítetted a Pythont, és az összes szükséges csomagot, akkor már használhatod a "szeletelő" eszközt.
-
-Hogy elkerüld a hibákat, összeomlásokat, ehhez én a következő parancsokat (és annak sorrendet) ajánlom:
-
-1. Futtasd a names_to_csv.py fájlt parancssorból így:
+1. Ha egy bizonyos képviselőre szeretnél rákeresni, akkor ezt a parancsot futtasd le:
 
 ```
-python3 names_to_csv.py
+python3 searchname.py
 ```
 
-2. És ezután futttasd a pdfextract.py-t a következő paranccsal:
+2. Ha az összes képviselő vagyonnyilatkozatát szeretnéd egy könyvtárban tárolni, akkor ezt a parancsot fusd le:
 
 ```
 python3 pdfextract.py
@@ -88,4 +80,4 @@ python3 pdfextract.py
 
 + Néhány politikus megváltoztathatta a nevét, vagy más formátumot használ a vagyonnyilatkozatában, mint ahogy a való életben szokott (dolgozok rajta).
 
-+ Keresős változat a következő pár napban várható.
++ Keresős változat a következő pár napban várható. (megoldva)
